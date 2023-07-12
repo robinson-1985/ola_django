@@ -1,11 +1,12 @@
 from django.shortcuts import render
-
+from blog.data import posts
 
 def blog(request):
     print('blog')
     
     context = {
         'text': 'Olá blog',
+        'posts': posts,
     }
     
     return render(
