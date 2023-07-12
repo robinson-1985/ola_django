@@ -5,7 +5,7 @@ def blog(request):
     print('blog')
     
     context = {
-        'text': 'Olá blog',
+        # 'text': 'Olá blog',
         'posts': posts,
     }
     
@@ -28,5 +28,20 @@ def exemplo(request):
     return render(
         request,
         'blog/exemplo.html',
+        context
+    )
+
+
+def post(request, id):
+    print('blog', id)
+    
+    context = {
+        'text': 'Olá blog',
+        'posts': posts,
+    }
+    
+    return render(
+        request,
+        'blog/index.html',
         context
     )
